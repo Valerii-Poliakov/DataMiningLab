@@ -47,8 +47,14 @@ iqr.a.outliers
 
 #4. Checking mean and sd after removing outliers
 
-mean( e[-which(e %in% c('740','850') )] )
-sd( e[-which(e %in% c('740','850') )] )
-mean( a[-which(a %in% c('3','1.4','24.8','7','8') )] )
-sd( a[-which(a %in% c('3','1.4','24.8','7','8') )] )
+mean( e )
+median( e )
+mean( a )
+median( a )
 
+e_without_outliers = e[-which(e %in% c('740','850') )]
+a_without_outliers = a[-which(a %in% c('3','1.4','24.8','7','8') )]
+mean( e_without_outliers )
+median( e_without_outliers )
+mean( a_without_outliers )
+median( a_without_outliers )
