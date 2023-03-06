@@ -45,7 +45,7 @@ iqr.e.outliers
 iqr.a.outliers <- a[(a < quantile(a,0.25) - 1.5*IQR(a)) | (a > quantile(a,0.75) + 1.5*IQR(a))]
 iqr.a.outliers
 
-#4. Checking mean and sd after removing outliers
+#4. Checking mean and median after removing outliers
 
 mean( e )
 median( e )
