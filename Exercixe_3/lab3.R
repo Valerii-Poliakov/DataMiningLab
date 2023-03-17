@@ -36,3 +36,9 @@ wss <- sapply(results, function(x) x$tot.withinss)
 wss
 plot(wss, type = "b", xlab = "Iteration", ylab = "WSS")
 
+# plot 5th iteration result
+with(d, plot(V1, V2, col=results[[14]]$cluster))
+points(results[[14]]$centers, col=1,pch=16,cex=1)
+
+
+
