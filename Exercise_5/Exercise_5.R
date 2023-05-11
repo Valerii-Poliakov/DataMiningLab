@@ -61,7 +61,7 @@ n<-read.csv(file="new records.csv", header=TRUE)
 n
 
 # CART
-model<-rpart(class ~ ., data = d, method = "class", control=rpart.control(minsplit=2, cp=0.0))
+model<-rpart(class ~ ., data = d, method = "class", control=rpart.control(minsplit=7, cp=0.0))
 rpart.plot(model)
 
 # results of the CART algorithm for our new records
@@ -73,7 +73,7 @@ pred
 d.train <- d[, 1:13]     #train data without class
 d.train.class <- d[, 14] #train data with class only
 
-model<-C5.0(x=d.train, y=d.train.class, control=C5.0Control(CF=1.0, minCases = 2))
+model<-C5.0(x=d.train, y=d.train.class, control=C5.0Control(CF=1.0, minCases = 7))
 plot(model)
 
 # results of the C4.5 algorithm for our new records
