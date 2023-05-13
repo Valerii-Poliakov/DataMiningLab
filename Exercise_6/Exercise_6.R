@@ -22,7 +22,7 @@ p <- predict(model, new)  # estimated  values of Y for new values of X
 q <- c(24.89, 47.13, 59)  # true values of Y for new values of X
 
 sse <- sum((q - p)^2)
-sst <- sum((mpg-mean(mpg))^2)
+sst <- sum((y-mean(y))^2)
 pseudo_r2 <- 1 - sse/sst
 pseudo_r2
 
