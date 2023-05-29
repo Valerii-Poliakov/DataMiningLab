@@ -1,4 +1,5 @@
-#install.packages("arules")
+install.packages("arules")
+install.packages("arulesViz")
 library("arules")
 library("arulesViz")
 
